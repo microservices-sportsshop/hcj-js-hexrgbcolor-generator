@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const hexcolor = document.querySelector(".hexcolor");
+    const hexcolorMain = document.querySelector(".hexcolor-div .hexcolor");
     const hexcolorDisplay = document.querySelector(".color-display .hexcolor");
     const rgbcolorDisplay = document.querySelector(".color-display .rgbcolor");
     const generateBtn = document.querySelector(".generate");
@@ -10,14 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const randomColor = `#${Math.random().toString(16).substring(2, 8)}`;
         const rgbColor = hexToRgb(randomColor);
 
-        hexcolor.textContent = randomColor;
+        hexcolorMain.textContent = randomColor;
         colorBox.style.backgroundColor = randomColor;
         hexcolorDisplay.textContent = randomColor;
         rgbcolorDisplay.textContent = rgbColor;
     };
 
     const resetNumber = () => {
-        hexcolor.textContent = "#ffffff";
+        hexcolorMain.textContent = "#ffffff";
         hexcolorDisplay.textContent = "#ffffff";
         rgbcolorDisplay.textContent = "rgb(255, 255, 255)";
         colorBox.style.backgroundColor = "#ffffff";
